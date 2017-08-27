@@ -1,0 +1,103 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="">
+	<nav>
+		<div class="nav-wrapper blue-grey darken-4 yellow-text">
+			<a href="#" class="brand-logo "><img height="62" width="128" src="./../assets/logo.PNG"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a>About</a></li>
+			<li><a>Institutes</a></li>
+			<li><a>Help</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br><br>
+
+	<h2 class="center-align white-text">A Platform For Institutional Management</h2><br><br>
+	<h6 class="center-align white-text">This lines can be replaced with an introduction</h6><br><br>
+
+	<div class="row ">
+		<a  class="col s2 offset-s5 btn waves-effect waves-light orange darken-3" href="#login">Log In
+			<i class="material-icons right">send</i>
+		</a>	
+	</div>
+
+	<div class="row ">
+		<a  class="col s2 offset-s5 btn waves-effect waves-light orange darken-3" href="#register">Register
+			<i class="material-icons right">account_circle</i>
+		</a>	
+	</div>
+	<div class="row">
+
+		<div id="login" class="col s4 offset-s4 modal z-depth-4">
+			<div class="modal-content">
+					<div class="row">
+						<form #myForm="ngForm" class="col s12">
+						
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="username" type="email">
+									<label for="username">Username</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+							</div>
+						
+							<div class="input-field col s12">
+
+							<label>Login Type:{{selectedtype}} 1.Student 2.Teacher 3.Parent 4.Admin</label>
+
+								<input type="text" [(ngModel)]="selectedtype" name="logintype">
+				
+
+							</div>
+
+
+							
+							<div class="row">
+								<div class="col s12 center">
+									<br>                                 
+									<button (click)="onSubmit()" class="btn waves-effect waves-light orange darken-3">Log In
+										<i class="material-icons right">send</i>
+									</button>
+									
+								</div>
+							</div>
+				
+						
+						</form>
+					</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row valign-wrapper">
+		<div id="register" class="modal col s4 offset-s4">
+		
+			<div class="row center-align">
+				<br>
+				<button class="btn waves-effect waves-light orange darken-3 white-text z-depth-4" routerLink="register" routerLinkActive="active">
+					Student
+				</button>
+			</div>
+			<div class="row center-align">
+				<br>
+				<button class="btn waves-effect waves-light orange darken-3 white-text z-depth-4" routerLink="register" routerLinkActive="active">
+					Teacher
+				</button>
+			</div>
+			<div class="row center-align">
+				<br>
+				<button class="btn waves-effect waves-light orange darken-3 white-text z-depth-4" routerLink="register" routerLinkActive="active">
+					Admin
+				</button>
+			</div>
+		</div>
+	</div>
+          
+</div>
